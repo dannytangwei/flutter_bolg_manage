@@ -51,7 +51,7 @@ class HomeTabOptionsState extends State<HomePage>
   @override
   void initState() {
     tabController = TabController(length: 3, vsync: this);
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
 
     ///监听TabBar切换事件
     tabController?.addListener(() {
@@ -73,7 +73,7 @@ class HomeTabOptionsState extends State<HomePage>
   void dispose() {
     super.dispose();
     tabController?.dispose();
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
   }
 
   @override
